@@ -31,8 +31,8 @@ func unwrap_or_else(fn):
 	else:
 		return fn.call()
 
-static func Some(new_value):
-	return Maybe.new(new_value)
+func Some(new_value):
+	return get_script().new(new_value)
 
-static func None():
-	return Maybe.new()
+func None():
+	return get_script().new()
