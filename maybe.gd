@@ -31,8 +31,3 @@ func unwrap_or_else(fn):
 	else:
 		return fn.call()
 
-func Some(new_value):
-	return get_script().new(new_value)
-
-func None():
-	return get_script().new()
