@@ -1,5 +1,5 @@
 class_name Result
-extends Node
+extends Resource
 
 var value
 var error
