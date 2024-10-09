@@ -1,6 +1,6 @@
 # 🤔 what even is null?
 class_name Maybe
-extends Node
+extends Resource
 
 var value
 var has_value: bool = false
@@ -31,3 +31,9 @@ func unwrap_or_else(fn):
 	else:
 		return fn.call()
 
+func expr():
+	if self.has_value:
+		return { "Some": value }
+	else:
+		return "None"
+		
