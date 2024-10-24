@@ -31,8 +31,8 @@ func unwrap_or_else(fn):
 	else:
 		return fn.call()
 
-func grab_node(path: NodePath):
-	var node = get_node_or_null(path)
+func grab_node(base: Node, path: NodePath):
+	var node = base.get_node_or_null(path)
 	if not node:
 		self.has_value = false
 	else:

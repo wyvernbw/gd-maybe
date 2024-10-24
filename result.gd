@@ -5,10 +5,7 @@ var value
 var error
 var is_error
 
-<<<<<<< Updated upstream
-=======
 
->>>>>>> Stashed changes
 func is_ok() -> bool:
 	return !is_error
 
@@ -28,20 +25,6 @@ func err() -> Maybe:
 		return Maybe.Some(error)
 	return Maybe.None()
 
-<<<<<<< Updated upstream
-
-func Ok(new_value) -> Result:
-	value = new_value
-	error = null
-	is_error = false	
-	return self
-
-
-func Err(msg) -> Result:
-	value = null
-	error = msg
-	is_error = true
-=======
 func Ok(new_value) -> Result:
 	self.value = new_value
 	self.error = null
@@ -52,5 +35,4 @@ func Err(msg) -> Result:
 	self.value = null
 	self.error = msg
 	self.is_error = true
->>>>>>> Stashed changes
 	return self
