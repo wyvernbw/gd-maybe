@@ -31,9 +31,26 @@ func unwrap_or_else(fn):
 	else:
 		return fn.call()
 
+<<<<<<< Updated upstream
 func expr():
 	if self.has_value:
 		return { "Some": value }
 	else:
 		return "None"
 		
+=======
+func grab_node(path: NodePath):
+	var node = get_node_or_null(path)
+	if not node:
+		self.has_value = false
+	else:
+		self.has_value = true
+		self.value = node
+	return self
+
+func expr():
+	if self.has_value:
+		return { "Some": self.value }
+	else:
+		return "None"
+>>>>>>> Stashed changes
