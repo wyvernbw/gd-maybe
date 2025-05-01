@@ -9,6 +9,12 @@ func _init(new_value = null):
 	self.value = new_value
 	self.has_value = new_value != null
 
+func as_nullable():
+	if self.has_value:
+		return self.value
+	else:
+		return null
+
 func unwrap():
 	assert(self.has_value, "Tried to unwrap a null value!")
 	return self.value
