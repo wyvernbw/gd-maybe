@@ -15,6 +15,10 @@ func as_nullable():
 	else:
 		return null
 
+func expect(message: String):
+	assert(self.has_value, message)
+	return self.value
+
 func unwrap():
 	assert(self.has_value, "Tried to unwrap a null value!")
 	return self.value
